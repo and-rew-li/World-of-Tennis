@@ -1,0 +1,145 @@
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+
+body
+{
+    background: rgb(125,125,125);
+    font-family: "Anonymous Pro", sans-serif;
+}
+
+.main-container 
+{
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+
+.typewriter-text 
+{
+    overflow: hidden;
+    position: relative;
+    width: 10.5em;
+    border-right: 2px solid rgba(255, 255, 255, 0.75);
+    font-size: 40px;
+    white-space: nowrap;
+
+    animation: typewriter 4s steps(33) 1s 1 normal both,
+    blinkTextCursor 400ms steps(44) infinite normal;
+    cursor: pointer;
+}
+
+.typewriter-text:before, .typewriter-text:after 
+{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    top: 50%;
+    margin-top: -0.5px;
+    background: #fff;
+}
+  
+.typewriter-text:before 
+{
+    left: -2.5px;
+}
+
+.typewriter-text:after 
+{
+    right: 2.5px;
+    background: #fff;
+    transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+  
+.typewriter-text:hover:before 
+{
+    background: #fff;
+    width: 100%;
+    transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+  
+.typewriter-text:hover:after 
+{
+    background: transparent;
+    width: 100%;
+    transition: 0s;
+}
+  
+  
+
+/* .typewriter-text 
+{
+    background-image: linear-gradient(
+        to right,
+        #75d0f1,
+        #75d0f1 50%,
+        rgb(255, 255, 255) 50%
+    );
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    padding: 5px 0;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+.typewriter-text:before{
+content: '';
+background: #54b3d6;
+display: block;
+position: absolute;
+bottom: -3px;
+left: 0;
+width: 0;
+height: 3px;
+transition: all 0.3s ease-in-out;
+}
+
+.typewriter-text:hover {
+background-position: 0;
+}
+
+.typewriter-text:hover::before{
+width: 100%; 
+} */
+
+
+/*
+
+animation-name: typewriter;
+animation-duration: 4s;
+animation-timing-function: steps(44);
+animation-delay: 1s;
+animation-iteration-count: 1;
+animation-direction: normal;
+animation-fill-mode: both;
+
+*/
+
+
+@keyframes typewriter 
+{
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 10.5em;
+    }
+}
+
+@keyframes blinkTextCursor 
+{
+    from {
+        border-right-color: rgba(255, 255, 255, 0.75);
+    }
+
+    to {
+        border-right-color: transparent;
+    }
+}
